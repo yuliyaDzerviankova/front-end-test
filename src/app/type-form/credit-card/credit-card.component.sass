@@ -1,0 +1,55 @@
+@import "../../constants"
+
+form
+  padding-top: 40px
+
+  .credit-card
+    padding: 0 40px
+    max-height: 50vh
+    overflow-y: auto
+
+    div
+      @include flexAlign()
+      margin: 10px 0
+
+      &.cvv
+        margin: 0
+
+        .cvv-data
+          width: 70%
+          margin: 0
+          @include flexible(center, space-between)
+
+          input
+            width: 20%
+
+          p
+            margin: 0
+            font-style: italic
+            font-size: 12px
+            color: #a6a6a6
+
+      label, span
+        width: 30%
+
+      input
+        width: 70%
+
+    .card-type
+      input
+        width: auto
+        margin-right: 10px
+
+      label
+        width: 30%
+        display: flex
+        align-items: center
+
+  .ng-valid.ng-touched.ng-pristine
+    border: 2px solid green
+
+  .ng-invalid.ng-dirty
+    border: 2px solid red
+
+  .button
+    @include button

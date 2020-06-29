@@ -1,0 +1,62 @@
+<form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm.form.value)" novalidate>
+  <div class="credit-card">
+    <span>Все поля формы обязательны для заполнения</span>
+    <div>
+      <label for="cardNumber">Номер карты:</label>
+      <input
+        type="text"
+        id="cardNumber"
+        pattern="\d+"
+        minlength="16"
+        maxlength="16"
+        name="cardNumber"
+        [(ngModel)]="user.cardNumber"
+      >
+    </div>
+    <div>
+      <label for="cardExpiryDate">Месяц / год:</label>
+      <input
+        type="text"
+        id="cardExpiryDate"
+        name="cardExpiryDate"
+        validateMask
+        maxlength="5"
+        [(ngModel)]="user.cardExpiryDate"
+      >
+    </div>
+    <div class="cvv">
+      <label for="cardCode">CVC2 или CVV2:</label>
+      <div class="cvv-data">
+        <input
+          type="password"
+          id="cardCode"
+          name="cardCode"
+          pattern="\d+"
+          minlength="3"
+          maxlength="3"
+          [(ngModel)]="user.cardCode"
+        >
+        <p>3 цифры</p>
+      </div>
+    </div>
+    <div class="card-type">
+      <span>Тип карты:</span>
+      <label *ngFor="let card of cardType">
+        <input
+          type="radio"
+          [value]="card"
+          name="cardType"
+          [(ngModel)]="user.cardType"
+        >
+        {{card.value}}
+      </label>
+    </div>
+  </div>
+  <div class="button">
+    <span class="back">
+      <img src="./assets/images/arrow-2.png" alt="back">
+      <a routerLink="/typeForm/personal">Личные данные</a>
+    </span>
+    <button [disabled]="!ngForm.valid">Далее</button>
+  </div>
+</form>

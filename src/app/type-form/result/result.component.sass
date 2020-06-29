@@ -1,0 +1,136 @@
+@import "../../constants"
+
+.result
+  padding: 40px
+
+  .personal
+    text-transform: uppercase
+    font-weight: bold
+
+  table
+    margin-top: 10px
+    width: 100%
+    border: 1px solid #d3d3d3
+    border-radius: 5px
+    border-spacing: 0
+
+    tr
+      &.header
+        font-size: 13px
+
+        td
+          padding: 7px 10px
+
+      &:first-child
+        td
+          border-bottom: 1px solid #d3d3d3
+
+      td
+        border-right: 1px solid #d3d3d3
+        padding: 10px
+
+        &:last-child
+          border-right: none
+
+        &.additional
+          position: relative
+
+          span
+            color: $turquoise
+            border-bottom: 1px dashed $turquoise
+            cursor: pointer
+
+          .hint
+            display: block
+
+            background: rgba(0, 0, 0, .8)
+            position: absolute
+            min-width: 300px
+            max-height: 250px
+            padding: 15px
+            border-radius: 5px
+            left: 80%
+            top: -285%
+            overflow-y: auto
+
+            &::after
+              content: ''
+              position: absolute
+              left: -20px
+              bottom: 45%
+              border: 10px solid transparent
+              border-right: 10px solid rgba(0, 0, 0, .8)
+
+            div
+              @include flexJustify()
+              flex-direction: column
+              margin: 10px 0
+
+              &:first-child, &:last-child
+                margin: 0
+
+              span
+                border: none
+
+                &.head
+                  font-size: 12px
+                  color: #bfbfbf
+
+                &.data
+                  color: #fff
+
+  .card-data
+    margin-top: 10px
+    position: relative
+
+    span
+      font-size: 14px
+      font-weight: 600
+      color: $turquoise
+      border-bottom: 1px dashed $turquoise
+
+      &.credit-data
+        text-transform: uppercase
+
+      &:hover
+        cursor: pointer
+
+    .credit-card
+      display: block
+      background: rgba(0, 0, 0, .8)
+      position: absolute
+      padding: 10px 15px
+      border-radius: 5px
+      left: 27%
+      top: -380%
+
+      &::after
+        content: ''
+        position: absolute
+        left: -20px
+        bottom: 45%
+        border: 10px solid transparent
+        border-right: 10px solid rgba(0, 0, 0, .8)
+
+      div
+        @include flexJustify()
+        flex-direction: column
+        margin: 10px 0
+
+        &:first-child, &:last-child
+          margin: 0
+
+        span
+          border: none
+
+          &.head
+            font-size: 12px
+            color: #bfbfbf
+
+          &.data
+            color: #fff
+
+.button
+  @include button
+  padding-left: 30px
+  justify-content: flex-start

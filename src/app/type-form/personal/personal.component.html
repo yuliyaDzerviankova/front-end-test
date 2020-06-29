@@ -1,0 +1,190 @@
+<form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm.form.value)" novalidate>
+  <div class="personal-data">
+    <span class="hint">Все поля формы обязательны для заполнения</span>
+    <div>
+      <label for="name">Имя:</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        [(ngModel)]="user.name"
+        required
+      >
+    </div>
+    <div>
+      <label for="surname">Фамилия:</label>
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        [(ngModel)]="user.surname"
+        required
+      >
+    </div>
+    <div>
+      <label for="middleName">Отчество:</label>
+      <input
+        type="text"
+        id="middleName"
+        name="middleName"
+        [(ngModel)]="user.middleName"
+        required
+      >
+    </div>
+    <div class="birthDate">
+      <label for="birthDate">Дата рождения:</label>
+      <input
+        type="date"
+        id="birthDate"
+        name="birthDate"
+        [(ngModel)]="user.birthDate"
+        required
+      >
+    </div>
+    <div class="gender">
+      <span>Пол:</span>
+      <label *ngFor="let gender of genders">
+        <input
+          type="radio"
+          name="gender"
+          [value]="gender"
+          [(ngModel)]="user.gender"
+          required
+        >
+        {{gender.value}}
+      </label>
+    </div>
+    <div>
+      <span>Страна проживания:</span>
+      <div class="select">
+        <div class="selected">
+          {{user.country.value}}
+          <div class="dropdown" (click)="setIsOpenCountry()"></div>
+        </div>
+        <div class="items" *ngIf="isOpenCountry">
+        <span
+          *ngFor="let country of countries"
+          (click)="selectCountry(country)"
+        >
+          {{country.value}}
+        </span>
+        </div>
+      </div>
+    </div>
+    <div class="address">
+      <label for="address">Адрес, почтовый индекс:</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        [(ngModel)]="user.address"
+        required
+      >
+      <a routerLink="/">Узнать индекс</a>
+    </div>
+    <div>
+      <label for="maidenName">Девичья фамилия матери:</label>
+      <input
+        type="text"
+        id="maidenName"
+        name="maidenName"
+        [(ngModel)]="user.maidenName"
+        required
+      >
+    </div>
+    <div>
+      <label for="bankCodeName">Кодовое слово в вашем банке:</label>
+      <input
+        type="text"
+        id="bankCodeName"
+        name="bankCodeName"
+        [(ngModel)]="user.bankCodeName"
+        required
+      >
+    </div>
+    <div class="howKnow">
+      <label for="howKnow">Как вы узнали о нашем сайте:</label>
+      <textarea
+        id="howKnow"
+        name="howKnow"
+        [(ngModel)]="user.howKnow"
+        required
+      ></textarea>
+      <span>Из газет,<br> телевидения,<br> радио или проч.</span>
+    </div>
+    <div>
+      <label for="friendEmail">Email друга:</label>
+      <input
+        type="text"
+        id="friendEmail"
+        name="friendEmail"
+        [(ngModel)]="user.friendEmail"
+        required
+      >
+    </div>
+    <div *ngIf="male">
+      <label for="girlfriendPhone">Номер телефона своей девушки:</label>
+      <input
+        type="text"
+        id="girlfriendPhone"
+        name="girlfriendPhone"
+        pattern="^\W[0-9]{12}"
+        [(ngModel)]="user.girlfriendPhone"
+        [required]="user.gender.id === 0"
+        maxlength="13"
+        (ngModelChange)="validatePhoneNumber(user.girlfriendPhone)"
+      >
+    </div>
+    <div *ngIf="male">
+      <label>Любимая футбольная команда:</label>
+      <div class="select">
+        <div class="selected">
+          {{user.footballTeam.value}}
+          <div class="dropdown" (click)="setIsOpen()"></div>
+        </div>
+        <div class="items" *ngIf="isOpen">
+        <span
+          *ngFor="let team of footballTeams"
+          (click)="selectTeam(team)"
+        >
+          {{team.value}}
+        </span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="female">
+      <label for="boyfriendPhone">Номер телефона своего парня:</label>
+      <span class="boyFriend">
+        <input
+          type="text"
+          id="boyfriendPhone"
+          name="boyfriendPhone"
+          pattern="^\W[0-9]{12}"
+          maxlength="13"
+          [(ngModel)]="user.boyfriendPhone"
+          [required]="user.gender.id === 1"
+        >
+        </span>
+    </div>
+    <div *ngIf="female">
+      <label>Скоровороду какой фирмы предпочитаете:</label>
+      <div class="select">
+        <div class="selected">
+          {{selectedPan?.name}}
+          <div class="dropdown" (click)="setIsOpenPan()"></div>
+        </div>
+        <div class="items" *ngIf="isOpenPan">
+        <span
+          *ngFor="let pan of pans"
+          (click)="selectPan(pan)"
+        >
+          {{pan.name}}
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <button [disabled]="!ngForm.valid">Далее</button>
+  </div>
+</form>

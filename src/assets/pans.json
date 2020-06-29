@@ -1,0 +1,406 @@
+[
+  {
+    "id": 0,
+    "name": "365 Вкусных дней"
+  },
+  {
+    "id": 1,
+    "name": "Agness"
+  },
+  {
+    "id": 2,
+    "name": "Alpenkok"
+  },
+  {
+    "id": 3,
+    "name": "Appetite"
+  },
+  {
+    "id": 4,
+    "name": "Arcos"
+  },
+  {
+    "id": 5,
+    "name": "Ballarini"
+  },
+  {
+    "id": 6,
+    "name": "Banquet"
+  },
+  {
+    "id": 7,
+    "name": "BEKKER"
+  },
+  {
+    "id": 8,
+    "name": "Bergner"
+  },
+  {
+    "id": 9,
+    "name": "Berlinger Haus"
+  },
+  {
+    "id": 10,
+    "name": "Berndes"
+  },
+  {
+    "id": 11,
+    "name": "BOHMANN"
+  },
+  {
+    "id": 12,
+    "name": "Bollire"
+  },
+  {
+    "id": 13,
+    "name": "BoyScout"
+  },
+  {
+    "id": 14,
+    "name": "Bradex"
+  },
+  {
+    "id": 15,
+    "name": "Brizoll"
+  },
+  {
+    "id": 16,
+    "name": "Broszio"
+  },
+  {
+    "id": 17,
+    "name": "Calve"
+  },
+  {
+    "id": 18,
+    "name": "CATA"
+  },
+  {
+    "id": 19,
+    "name": "Circulon"
+  },
+  {
+    "id": 20,
+    "name": "Contacto"
+  },
+  {
+    "id": 21,
+    "name": "CS-Kochsysteme"
+  },
+  {
+    "id": 22,
+    "name": "Domo"
+  },
+  {
+    "id": 23,
+    "name": "DOSH HOME"
+  },
+  {
+    "id": 24,
+    "name": "Electrolux"
+  },
+  {
+    "id": 25,
+    "name": "Endever"
+  },
+  {
+    "id": 26,
+    "name": "Esprado"
+  },
+  {
+    "id": 27,
+    "name": "Eurostek"
+  },
+  {
+    "id": 28,
+    "name": "Fest"
+  },
+  {
+    "id": 29,
+    "name": "Fiskars"
+  },
+  {
+    "id": 30,
+    "name": "Fissler"
+  },
+  {
+    "id": 31,
+    "name": "Fissman"
+  },
+  {
+    "id": 32,
+    "name": "Flonal"
+  },
+  {
+    "id": 33,
+    "name": "Frybest"
+  },
+  {
+    "id": 34,
+    "name": "Galaxy"
+  },
+  {
+    "id": 35,
+    "name": "Gefu"
+  },
+  {
+    "id": 36,
+    "name": "Gipfel"
+  },
+  {
+    "id": 37,
+    "name": "Gorenje"
+  },
+  {
+    "id": 38,
+    "name": "Granchio"
+  },
+  {
+    "id": 39,
+    "name": "Grand Metall Invest"
+  },
+  {
+    "id": 40,
+    "name": "Grillux"
+  },
+  {
+    "id": 41,
+    "name": "Grunwerg"
+  },
+  {
+    "id": 42,
+    "name": "Hendi"
+  },
+  {
+    "id": 43,
+    "name": "Hisar"
+  },
+  {
+    "id": 44,
+    "name": "Hit"
+  },
+  {
+    "id": 45,
+    "name": "Hoffmann"
+  },
+  {
+    "id": 46,
+    "name": "Holt"
+  },
+  {
+    "id": 47,
+    "name": "Home Element"
+  },
+  {
+    "id": 48,
+    "name": "Home Line"
+  },
+  {
+    "id": 49,
+    "name": "Ikea"
+  },
+  {
+    "id": 50,
+    "name": "IRIT"
+  },
+  {
+    "id": 51,
+    "name": "Jarko"
+  },
+  {
+    "id": 52,
+    "name": "Kapp"
+  },
+  {
+    "id": 53,
+    "name": "Kaufgut"
+  },
+  {
+    "id": 54,
+    "name": "KELLI"
+  },
+  {
+    "id": 55,
+    "name": "Kenwell"
+  },
+  {
+    "id": 56,
+    "name": "KINGHoff"
+  },
+  {
+    "id": 57,
+    "name": "Klausberg"
+  },
+  {
+    "id": 58,
+    "name": "Kruger"
+  },
+  {
+    "id": 59,
+    "name": "Kuchenprofi"
+  },
+  {
+    "id": 60,
+    "name": "Kukmara"
+  },
+  {
+    "id": 61,
+    "name": "Lara"
+  },
+  {
+    "id": 62,
+    "name": "Lava"
+  },
+  {
+    "id": 63,
+    "name": "Leonord"
+  },
+  {
+    "id": 64,
+    "name": "Lihtar"
+  },
+  {
+    "id": 65,
+    "name": "Maestro"
+  },
+  {
+    "id": 66,
+    "name": "Maku"
+  },
+  {
+    "id": 67,
+    "name": "Mallony"
+  },
+  {
+    "id": 68,
+    "name": "Market Union"
+  },
+  {
+    "id": 69,
+    "name": "Marta"
+  },
+  {
+    "id": 70,
+    "name": "Maxwell"
+  },
+  {
+    "id": 71,
+    "name": "Mayer&Boch"
+  },
+  {
+    "id": 72,
+    "name": "Maysternya"
+  },
+  {
+    "id": 73,
+    "name": "Meisterklasse"
+  },
+  {
+    "id": 74,
+    "name": "Mercury"
+  },
+  {
+    "id": 75,
+    "name": "Miele"
+  },
+  {
+    "id": 76,
+    "name": "Moulin Villa"
+  },
+  {
+    "id": 77,
+    "name": "MPM"
+  },
+  {
+    "id": 78,
+    "name": "Myron Cook"
+  },
+  {
+    "id": 79,
+    "name": "Nadoba"
+  },
+  {
+    "id": 80,
+    "name": "NZ"
+  },
+  {
+    "id": 81,
+    "name": "Oursson"
+  },
+  {
+    "id": 82,
+    "name": "Ozti"
+  },
+  {
+    "id": 83,
+    "name": "Pensofal"
+  },
+  {
+    "id": 84,
+    "name": "Perfecto Linea"
+  },
+  {
+    "id": 85,
+    "name": "Peterhof"
+  },
+  {
+    "id": 86,
+    "name": "Pintinox"
+  },
+  {
+    "id": 87,
+    "name": "Polaris"
+  },
+  {
+    "id": 88,
+    "name": "Pomi d'Oro"
+  },
+  {
+    "id": 89,
+    "name": "Pyrex"
+  },
+  {
+    "id": 90,
+    "name": "Rashko Baba"
+  },
+  {
+    "id": 91,
+    "name": "Redmond"
+  },
+  {
+    "id": 92,
+    "name": "Regent"
+  },
+  {
+    "id": 93,
+    "name": "Rondell"
+  },
+  {
+    "id": 94,
+    "name": "Royalty Line"
+  },
+  {
+    "id": 95,
+    "name": "Satoshi"
+  },
+  {
+    "id": 96,
+    "name": "Scovo"
+  },
+  {
+    "id": 97,
+    "name": "Sinbo"
+  },
+  {
+    "id": 98,
+    "name": "Skeppshult"
+  },
+  {
+    "id": 99,
+    "name": "Smile"
+  },
+  {
+    "id": 100,
+    "name": "SSenzo"
+  }
+]

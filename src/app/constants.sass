@@ -1,0 +1,43 @@
+$turquoise: #19cbac
+
+@mixin flexible ($align: center, $justify: center)
+  display: flex
+  align-items: $align
+  justify-content: $justify
+
+@mixin flexAlign ($align: center)
+  display: flex
+  align-items: $align
+
+@mixin flexJustify ($justify: center)
+  display: flex
+  justify-content: $justify
+
+@mixin button()
+  border-top: 1px solid #ccc
+  padding: 10px 0
+  @include flexible()
+
+  .back
+    img
+      margin-right: 10px
+    a
+      color: $turquoise
+      margin-right: 20px
+      &:hover
+        color: red
+
+  button
+    background: linear-gradient(to bottom, #18caab, #02bea0)
+    border: none
+    font-size: 16px
+    padding: 10px 30px
+    color: #fff
+    border-radius: 5px
+
+    &:hover
+      cursor: pointer
+      background: #18caab
+
+    &:disabled
+      background: #a6a6a6

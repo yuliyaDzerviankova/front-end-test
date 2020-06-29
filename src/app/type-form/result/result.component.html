@@ -1,0 +1,117 @@
+<div class="result">
+  <span class="personal">Личные данные</span>
+  <table>
+    <tr class="header">
+      <td>Имя</td>
+      <td>Фамилия</td>
+      <td>Отчество</td>
+      <td>Дата рождения</td>
+      <td>Пол</td>
+      <td>Страна</td>
+      <td>{{personalData ? 'Инфо' : 'Функция'}}</td>
+    </tr>
+    <tr *ngIf="personalData">
+      <td>{{personalData.name}}</td>
+      <td>{{personalData.surname}}</td>
+      <td>{{personalData.middleName}}</td>
+      <td>{{personalData.birthDate | date: 'dd/MM/yyyy'}}</td>
+      <td>{{personalData.gender.value}}</td>
+      <td>{{personalData.country.value}}</td>
+      <td class="additional">
+        <span (click)="isShowInfo = !isShowInfo">Доп. инфо</span>
+        <div class="hint" *ngIf="isShowInfo">
+          <div>
+            <span class="head">Адрес, почтовый индекс:</span>
+            <span class="data">{{personalData.address}}</span>
+          </div>
+          <div>
+            <span class="head">Девичья фамилия матери:</span>
+            <span class="data">{{personalData.maidenName}}</span>
+          </div>
+          <div>
+            <span class="head">Кодовое слово в вашем банке:</span>
+            <span class="data">{{personalData.bankCodeName}}</span>
+          </div>
+          <div>
+            <span class="head">Как вы узнали о нашем сайте:</span>
+            <span class="data">{{personalData.howKnow}}</span>
+          </div>
+          <div>
+            <span class="head">Email друга:</span>
+            <span class="data">{{personalData.friendEmail}}</span>
+          </div>
+          <div>
+            <span class="head">{{
+              personalData.gender.id === 0
+                ? 'Номер телефона своей девушки'
+                : 'Номер телефона своего парня'
+              }}</span>
+            <span class="data">{{
+              personalData.gender.id === 0
+                ? personalData.girlfriendPhone
+                : personalData.boyfriendPhone
+              }}</span>
+          </div>
+          <div>
+            <span class="head">{{
+              personalData.gender.id === 0
+                ? 'Любимая футбольтная команда'
+                : 'Какую сковороду предпочитаешь'
+              }}</span>
+            <span class="data">{{
+              personalData.gender.id === 0
+                ? personalData.footballTeam?.value
+                : personalData.firmOfPan?.value
+              }}</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <ng-container *ngIf="fromCsv">
+      <tr *ngFor="let csv of fromCsv">
+        <td>{{csv.name}}</td>
+        <td>{{csv.surname}}</td>
+        <td>{{csv.middleName}}</td>
+        <td>{{csv.birthDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{csv.gender}}</td>
+        <td>{{csv.country}}</td>
+        <td>
+          <button
+            (click)="editData(csv)"
+            type="button"
+            class="edit"
+          >Править</button>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+
+  <div class="card-data" *ngIf="personalData">
+    <span class="credit-data" (click)="isShowCredit = !isShowCredit">Данные кредитной карты</span>
+    <div class="credit-card" *ngIf="isShowCredit">
+      <div>
+        <span class="head">Номер карты:</span>
+        <span class="data">{{transformCard(personalData.cardNumber)}}</span>
+      </div>
+      <div>
+        <span class="head">Месяц / год:</span>
+        <span class="data">{{personalData.cardExpiryDate}}</span>
+      </div>
+      <div>
+        <span class="head">CVC2 / CVV2:</span>
+        <span class="data">{{personalData.cardCode}}</span>
+      </div>
+      <div>
+        <span class="head">Тип карты:</span>
+        <span class="data">{{personalData.cardType.value}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button">
+    <span class="back">
+      <img src="./assets/images/arrow-2.png" alt="back">
+      <a routerLink="/typeForm/creditCard">Данные кредитной карты</a>
+    </span>
+  <button (click)="save()">Сохранить</button>
+</div>

@@ -1,0 +1,165 @@
+@import "../../constants"
+
+form
+  padding-top: 40px
+
+  .personal-data
+    padding: 0 40px
+    max-height: 50vh
+    overflow-y: auto
+
+    .hint
+      font-size: 12px
+
+    div
+      display: flex
+      align-items: center
+      margin: 15px 0
+
+      &.birthdate
+        input
+          width: 20%
+
+      &.gender
+        label
+          width: 35%
+          @include flexAlign()
+          input
+            margin-right: 10px
+
+        input
+          width: auto
+
+      &.address
+        a
+          font-size: 12px
+          color: #18caab
+          font-style: italic
+          width: 14%
+          text-align: right
+
+
+      &.howKnow
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+        span
+          margin-left: 15px
+          font-size: 12px
+          font-style: italic
+          width: 12%
+          color: #a6a6a6
+
+        textarea
+          height: 150px
+          resize: none
+
+
+      label, span
+        width: 30%
+
+      input, select, textarea, .boyFriend
+        width: 55%
+
+    .boyFriend
+      input
+        width: 100%
+
+    .select
+      width: 55%
+      position: relative
+
+      .selected
+        width: 100%
+        border: 1px solid #d3d3d3
+        height: 25px
+        padding-left: 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .dropdown
+          background: #f0f0f0
+          padding: 7px 10px 0
+          margin: 0
+          height: 100%
+          box-sizing: border-box
+          border-left: 1px solid #d3d3d3
+
+          &:hover
+            background: #e4e4e4
+            cursor: pointer
+
+          &::after
+            content: ''
+            width: 0
+            height: 0
+            border: 7px solid transparent
+            border-color: #666666 transparent transparent transparent
+
+      .items
+        position: absolute
+        top: 42px
+        left: 0
+        margin-top: 0
+        border: 1px solid #d3d3d3
+        border-top: none
+        background: #fff
+        flex-direction: column
+        width: 100%
+        max-height: 215px
+        overflow-y: auto
+        box-sizing: border-box
+
+        &::-webkit-scrollbar
+          width: 6px
+
+        &::-webkit-scrollbar-thumb
+          width: 4px
+          height: 50px
+          background: #cccccc
+          border-radius: 4px
+
+        span
+          width: 100%
+          box-sizing: border-box
+          padding: 5px 0 5px 15px
+          cursor: pointer
+
+          &:hover
+            background: #eaeaea
+
+
+      textarea
+        resize: none
+
+  .ng-invalid.ng-dirty
+    border: 1px solid red
+
+  .button
+    z-index: 0
+    border-top: 1px solid #ccc
+    padding: 10px 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+    span
+      a
+        color: #19cbac
+
+    button
+      background: linear-gradient(to bottom, #18caab, #02bea0)
+      border: none
+      font-size: 16px
+      padding: 10px 30px
+      color: #fff
+      border-radius: 5px
+
+      &:hover
+        cursor: pointer
+        background: #18caab
+
+      &:disabled
+        background: #a6a6a6

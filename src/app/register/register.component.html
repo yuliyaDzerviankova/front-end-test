@@ -1,0 +1,24 @@
+<div class="registryType">
+  <div class="container">
+    <p>Выберите способ регистрации:</p>
+    <div class="register">
+      <label *ngFor="let type of typesRegister">
+        <input
+          type="radio"
+          name="way"
+          [value]="type"
+          [(ngModel)]="typeRegister"
+        >
+        {{type.value}}
+      </label>
+    </div>
+    <div class="load" *ngIf="typeRegister?.id === 1">
+      <span (click)="uploadList()" class="load-list">Загрузить список</span>
+      <span class="loaded-list">{{nameFile}}</span>
+    </div>
+    <button
+      (click)="navigate()"
+      [disabled]="!typeRegister || typeRegister.id === 1 && !nameFile"
+    >Далее</button>
+  </div>
+</div>

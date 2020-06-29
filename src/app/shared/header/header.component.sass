@@ -1,0 +1,32 @@
+@import "../../constants"
+
+header
+  display: flex
+  align-items: center
+  border-bottom: 2px solid $turquoise
+  flex: 0 0 auto
+
+  .title
+    background: $turquoise
+    color: #fff
+    padding: 5px 90px 5px 50px
+    clip-path: polygon(0 0, 90% 0%, 80% 100%, 0 100%)
+
+  .menu
+    flex: 1
+
+    ul
+      display: flex
+      align-items: center
+
+      li
+        padding: 5px 30px
+        clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)
+
+        &.active
+          background: $turquoise
+          color: #fff
+
+        &:hover
+          color: $turquoise
+          cursor: pointer

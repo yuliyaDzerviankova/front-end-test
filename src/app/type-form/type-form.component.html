@@ -1,0 +1,22 @@
+<div class="typeForm">
+  <a routerLink="/register">Назад</a>
+  <div class="container">
+    <div class="personal-menu">
+      <h1>Типовая форма</h1>
+      <ul>
+        <a routerLink="personal" routerLinkActive="active">
+          <li>Личные данные</li>
+        </a>
+        <a routerLink="creditCard" routerLinkActive="active">
+          <li>Данные кредитной карты</li>
+        </a>
+        <a routerLink="result" routerLinkActive="active">
+          <li>Результат</li>
+        </a>
+      </ul>
+    </div>
+    <div class="data">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
